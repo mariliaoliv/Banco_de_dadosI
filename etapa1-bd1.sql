@@ -1,5 +1,6 @@
 -- Francisca Marilia de Oliveira Rodrigues
 -- 555093
+
 -- Q1) Importar o banco de dados repassado ao longo das aulas em MySQL
 create database BD1;
 use BD1;
@@ -14,6 +15,7 @@ select * from employee where Dno = 5;
 -- Q4) Incluir um novo departamento denominado "datascience" com Dno =7;
 insert into department ( Dname, Dnumber, Mgr_ssn) 
 values ('DataScience', 7, '888665555');
+
 -- Q5) Incluir pelo menos dois cientistas de dados no novo departamento com os atributos básicos;
 select * from employee;
 insert into employee( Fname, Minit, Lname, Ssn, Bdate,
