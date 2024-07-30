@@ -7,10 +7,10 @@ use BD1;
 show tables;
 
 -- Q2) Qual o nome dos departamentos da empresa?
-select * from department; 
+select Dname from department; 
 
 -- Q3) Quantos empregados tem o departamento de pesquisa ("research")?
-select * from employee where Dno = 5;
+select count(*) as number_of_employees from employee where Dno = 5;
 
 -- Q4) Incluir um novo departamento denominado "datascience" com Dno =7;
 insert into department ( Dname, Dnumber, Mgr_ssn) 
@@ -28,10 +28,7 @@ insert into employee ( Fname, Minit, Lname, Ssn, Bdate,
  '245 Detroid, Rivera MI', 'F', '18000', '123456789', 7);
  
 -- Q6) Aumentar o salário de todos os empregados em 23.5% do valor atual;
-update employee set salary = salary * 1.235 where Dno = 1;
-update employee set salary = salary * 1.235 where Dno = 4;
-update employee set salary = salary * 1.235 where Dno = 5;
-update employee set salary = salary * 1.235 where Dno = 7;
+update employee set salary = salary * 1.235;
 select * from employee;
 
 -- Q7) Mudar a endereço de residência ("Address") do departamento 4 
